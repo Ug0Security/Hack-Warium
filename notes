@@ -40,7 +40,7 @@ Additional notes :
 
 The finding was fun, i found the upload endpoint early but no idea how to use it..
 But the export function uses it to upload a CSV file of the results (wtf?) 
-AND there's a ssrf on it (basically, you can whose where to export the result in the export request) 
+AND there's a ssrf on it (basically, you can choose where to export the result in the export request) 
 so i manage to redirect the form to my serv
 
 Final Warning :
